@@ -24,11 +24,22 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit some common Arrow stuff
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common AfterlifeOS stuff.
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
+
+# Device configs
+AFTERLIFE_MAINTAINER := bmwtheseries
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES = 1080
+TARGET_PREBUILTS_LAWNICONS := true
+TARGET_USE_ECHO := true
+TARGET_SUPPORTS_BLUR := true
+
+# Include our private certificate
+-include vendor/atiga-priv/keys/keys.mk
 
 # Device identifier
-PRODUCT_NAME := arrow_lavender
+PRODUCT_NAME := afterlife_lavender
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_DEVICE := lavender

@@ -18,7 +18,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
 	 $(DEVICE_PATH)/overlay \
-	 $(DEVICE_PATH)/overlay-lineage
+	 $(DEVICE_PATH)/overlay-afterlife
 
 # PRODUCT_SHIPPING_API_LEVEL indicates the first api level, device has been commercially launched on.
 PRODUCT_SHIPPING_API_LEVEL := 28
@@ -98,11 +98,3 @@ PRODUCT_PACKAGES += \
 
 # Vendor files
 $(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
-
-# AOSP DEVICE
-PRODUCT_NAME := aosp_lavender
-PRODUCT_DEVICE := lavender
-PRODUCT_MODEL := Redmi Note 7 (AOSP)
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MANUFACTURER := Xiaomi
-
